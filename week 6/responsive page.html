@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+        
+    <style>
+        
+        /* Random void resolution */
+        div{
+            display: none;
+        }
+        
+        /* width > 300px and height > 350px*/ 
+        @media (min-width: 301px) and (min-height: 351px){
+            .firstResolution{
+                color: deepskyblue;
+                font-family: arial;
+                font-size: 36px;
+                display: block;
+            }
+
+            .secondResolution, .thirdResolution{
+                display: none;
+            }
+        }
+        
+        /* 100px > width >= 300px and 
+            100px > height >= 350px*/
+        @media (max-width: 300px) and (max-height: 350px) and (min-width: 101px) and (min-height: 101px){
+
+            .secondResolution{
+                color: red;
+                font-size: 24px;
+                font-family: helvetica;
+                display: block;
+            }
+            
+            .firstResolution, .thirdResolution{
+                display: none;
+            }
+        }
+        
+        /* width <= 100px and height <= 100px */
+        @media (max-width: 100px) and (max-width: 100px){
+            
+            .thirdResolution{
+                color: mediumpurple;
+                font-size: 18px;
+                font-family: courier;
+                display: block;
+            }
+            
+            .firstResolution, .secondResolution{
+                display: none;
+            }
+        }
+        
+
+    </style>
+    <body>
+        <div class="firstResolution">
+            Arial, 36, Blue
+        </div>
+        
+        <div class="secondResolution">
+            Helvetica, 24, Red
+        </div>
+        
+        <div class="thirdResolution">
+            Courier, 18, Purple
+        </div>
+
+    </body>
+</html>
